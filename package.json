@@ -1,0 +1,30 @@
+{
+  "name": "zhiteng",
+  "version": "1.0.0",
+  "description": "智滕教育",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf ./output && fis3 release -d ./output",
+    "dev": "fis3 server start --type node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fis-scaffold/default.git"
+  },
+  "keywords": [
+    "fis",
+    "scaffold"
+  ],
+  "author": "fex",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/fis-scaffold/default/issues"
+  },
+  "homepage": "https://github.com/fis-scaffold/default",
+  "dependencies": {
+    "fis-parser-less-2.x ": "^0.1.3",
+    "fis3-hook-module": "^1.1.1",
+    "minimist": "^1.1.1"
+  }
+}
