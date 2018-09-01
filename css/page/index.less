@@ -1,0 +1,213 @@
+body {
+ background: #FFF;
+}
+.table-cell{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center
+}
+
+.pt64 {
+  padding-top: 64px !important;
+}
+.bg2 {
+  background: #F7F7F7;
+}
+.colorGr {
+  color: rgb(59,203,157);
+}
+
+.index-first {
+  position: relative;
+  background: url(../../images/index/Group\ 111.jpg) no-repeat center;
+  min-height: 100vh;
+  color:#FFF;
+  .content {
+    display: table;
+    width: 100%;
+    min-height:  73vh; // calc(100vh - 116px - 213px);
+    padding-top: 80px;
+    .i-title {
+      font-size: 68px;
+      line-height: 95px;
+      color: #FFF;
+      text-align: center;
+    }
+
+    .i-desc {
+      text-align: center;
+      font-size: 24px;
+      line-height: 33px;
+      color: #FFF;
+    }
+  }
+
+
+}
+
+.text-img-align {
+  padding-top: 140px;
+  padding-bottom: 76px;
+  overflow: hidden;
+  &::after,
+  &::before {
+    clear: both;
+  }
+  .text {
+    float: left;
+    width: 366px;
+    .title {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 28px;
+      line-height: 29px;
+    }
+    p {
+      line-height: 24px;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+  }
+  .img {
+    max-width: 580px;
+    max-height: 260px;
+    float: right;
+    img {
+      max-width: 580px;
+      max-height: 260px;
+    }
+  }
+}
+
+.content2 {
+  position: relative;
+  text-align: center;
+  background: #FFF;
+  border-radius: 5px;
+  box-shadow: 0px 2px 14px;
+  position: relative;
+  bottom: -100px;
+  z-index: 1;
+  color: #333;
+  padding: 0px;
+
+  .i-row {
+    height: 210px;
+  }
+  .i-col {
+    width: 33.3%;
+    float: left;
+    margin-top: 56px;
+    height: 100px;
+    border-right: 1px solid #E5E5E5;
+    .title {
+      font-size: 20px;
+      margin-bottom: 13px;
+      margin-top: 10px;
+    }
+    .desc {
+      font-size: 12px;
+      width: 308px;
+      text-align: center;
+      margin: auto
+    }
+  }
+  .i-col:last-child {
+    border-right: 0px;
+  }
+  img {
+    vertical-align: initial;
+    margin-right: 9px;
+  }
+}
+
+.img-text-align {
+  overflow: hidden;
+  padding-top: 140px;
+  padding-bottom: 76px;
+  &::after,
+  &::before {
+    clear: both;
+  }
+  .text {
+    float: right;
+    width: 366px;
+    .title {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 28px;
+      line-height: 29px;
+    }
+    p {
+      line-height: 24px;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+  }
+  .img {
+    width: 578px;
+    float: left;
+  }
+}
+
+.cm-one-banner {
+  padding-top: 48px;
+  margin-bottom: 76px;
+  .bimg {
+    width: 100%;
+  }
+}
+.bg009 {
+  background: url(/images/index/9.jpg) no-repeat center;
+  height: 500px;
+}
+.cm-text-banner {
+  position: relative;
+  .content2 {
+    height: 500px;
+    position: relative;
+    top: 0;
+    color: #FFF;
+    background: rgba(249, 249, 249, 0);
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px;
+    width: 100%;
+    display: table;
+    table-layout: initial;
+    .i-row {
+      vertical-align: middle;
+      display: table-cell;
+      max-height: 368px;
+      height: 340px;
+    }
+  }
+
+}
+
+.card-list {
+  .cl-title {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .cl-desc {
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  .thumbnail {
+    border: 1px solid #E5E5E5;
+    box-shadow: 0px 2px 8px -2px;;
+    margin-bottom: 60px;
+  }
+}
+
+/*响应设计 小于1200px 显示 990px宽度 */
+@media (min-width: 1200px) {
+  .container {
+    width: 1180px;
+  }
+}
