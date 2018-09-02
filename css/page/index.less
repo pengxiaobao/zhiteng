@@ -171,7 +171,7 @@ body {
     background: rgba(249, 249, 249, 0);
     border-radius: 0px;
     box-shadow: 0px 0px 0px;
-    width: 100%;
+    // width: 100%;
     display: table;
     table-layout: initial;
     .i-row {
@@ -179,6 +179,9 @@ body {
       display: table-cell;
       max-height: 368px;
       height: 340px;
+    }
+    .i-col {
+      margin-top: 0px;
     }
   }
 
@@ -202,11 +205,21 @@ body {
     border: 1px solid #E5E5E5;
     box-shadow: 0px 2px 8px -2px;;
     margin-bottom: 60px;
+    .caption {
+      height: 180px;
+      padding: 0px;
+    }
+    img {
+      // height: 192px; 
+      width: 100%;
+      display: block;
+    }
   }
 }
 
 
 .card-list-2 {
+  padding-top: 50px;
   .cl-title {
     font-size: 24px;
     line-height: 29px;
@@ -222,11 +235,136 @@ body {
   }
   .thumbnail {
     border: 0px;
-    width: 200px;
+    // width: 200px;
+    .caption{
+      padding: 0px;
+    }
     img {
       border-radius: 50%;
+      // height: 192px; 
+      width: 100%;
+      display: block;
+    }
+    .t {
+      font-size: 20px;
+      text-align: center;
+      font-weight: bold;
+      line-height: 24px;
+      margin-bottom: 15px;
+    }
+    .d {
+      text-align: center;
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 15px;
     }
   }
+}
+
+
+
+.content-form {
+  overflow: hidden;
+  position: fixed;
+  bottom: -1px;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  box-shadow: 0 0 24px rgba(0, 60, 83, 0.2);
+  z-index: 1000;
+  display: none;
+  text-align: center;
+  line-height: 100px;
+  // height: 100px;
+  color: #FFF;
+  background: #3bcb9d;
+}
+.content-form .form-group {
+  margin-left: 10px;
+}
+
+.content-form .service {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 165px;
+  height: 100%;
+  padding-left: 30px;
+  text-align: left;
+  padding-top: 20px;
+  background: rgb(24, 121, 27);
+  cursor: pointer;
+  transition: background .25s ease
+}
+
+.content-form .service:hover {
+  background: #0fd6be
+}
+
+.content-form .service span {
+  color: #fff;
+  padding-left: 12px
+}
+.content-form .sbbtn {
+  margin-left: 20px;
+  height: 105px;
+  border: 0px;
+  border-radius: 0px;
+  padding: 0 60px;
+  font-size: 24px;
+  background: #FEC300;
+  color: #FFF;
+}
+label {
+  font-weight: initial;
+}
+.content-form select {
+  width: 176px;
+}
+
+@media (min-width: 100px){
+  .content-form {    
+    line-height: 24px;
+  }
+  .content-form .sbbtn {
+    padding: 0 20px;
+    height: 50px;
+  }
+  .content-form select {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px){
+  .content-form {    
+    line-height: 60px;
+  }
+  .content-form .sbbtn {
+    padding: 0 20px;
+    height: 50px;
+  }
+}
+@media (min-width: 992px){
+  .content-form .sbbtn {
+    padding: 0 30px;
+  }
+}
+
+
+.main.card-list-2 {
+  .thumbnail {
+    .caption .d{
+      line-height: 18px;
+    }
+    img {
+      width: 88px;
+      margin-bottom: 30px;
+    }
+  }
+}
+.main_bg127 {
+  background: url(/images/main/127.jpg) no-repeat center;
+  height: 540px;
 }
 
 /*响应设计 小于1200px 显示 990px宽度 */
