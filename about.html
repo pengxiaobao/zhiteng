@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="致力于上亿幼小学生的课外素质潜能开发、训练与推广" />
+  <meta name="keywords" content="智滕珠心算官方网站,智滕,智滕教育,珠心,珠心算,珠心算法,心算,心算法,智滕教育珠心算,特色教程,智滕教育特色课程" />
+  <title>首页 - 智滕教育官网</title>
+  <link rel="icon" type="image/x-icon" href="./images/main/127.png">
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/index.css">
+</head>
+
+<body>
+
+  <div class="index-first">
+    <link rel="import" href="./widget/head.html?__inline">
+    <div class="container content">
+      <div class="table-cell">
+        <h1 class="i-title">欢迎加入我们的大家庭</h1>
+        <p class="i-desc">服务于全球4-8岁幼儿的教育启智平台</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="about">
+    <div class="container text-img-align ">
+      <div class="text">
+        <p class="title">加盟热线：400-646-0696</p>
+        <p>招商经理：155 1066 5059</p>
+        <p>电子邮箱：zhitengzxs@126.com</p>
+        <p>公司地址：北京市海淀区中关村南大街2号院数码大厦A座3205 </p>
+      </div>
+      <div class="map" id="map"
+      style="overflow: hidden;position: relative;z-index: 0;background-color: rgb(243, 241, 236);color: rgb(0, 0, 0);text-align: left;width: 100%;box-shadow: 0px 2px 8px;height: 256px;border-radius: 20px;">
+      </div>
+    </div>
+  </div>
+
+  <div class="content-form " style="display: hidden">
+    <!--form 获取免费体验课程-->
+    <div class="container form-1802-2804" style="width: 100%">
+      <form class="form-inline">
+        <div class="form-group">
+          <label for="name">姓名：</label>
+          <input type="text" class="form-control" style="height: 50px;" id="name" placeholder="请填写姓名">
+        </div>
+        <div class="form-group">
+          <label for="phone">联系电话：</label>
+          <input type="text" class="form-control" style="height: 50px;" id="phone" placeholder="请输入联系电话">
+        </div>
+
+        <div class="form-group">
+          <label for="city">联系地址：</label>
+          <textarea class="form-control" id="addr" style="height: 50px;" placeholder="请输入联系地址"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="city">留言：</label>
+          <textarea class="form-control" id="message" style="height: 50px;" placeholder="亲，有什么想说的吗"></textarea>
+        </div>
+
+        <button type="button" class="btn btn-default sbbtn" id="submit">提交信息</button>
+      </form>
+    </div>
+  </div>
+
+  <link rel="import" href="./widget/footer.html?__inline">
+
+  <script type="text/javascript" src="./js/lib/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="./js/lib/jquery.typed.js"></script>
+  <script type="text/javascript" src="./js/lib/jquery.mcustomscrollbar.concat.min.js"></script>
+  <script type="text/javascript" src="./js/lib/swiper.min.js"></script>
+  <script type="text/javascript" src="./js/lib/echarts.min.js"></script>
+  <script type="text/javascript" src="./js/lib/canvas_fly.min.js"></script>
+  <script type="text/javascript" src="./js/lib/jquery.superslide.2.1.1.js"></script>
+  <script type="text/javascript" src="./js/index.js"></script>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=WNvQrkmAQhe1EBTtO6s0yfiVWjQMLLpU"></script>
+
+
+  <script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap() {
+      createMap(); //创建地图
+      setMapEvent(); //设置地图事件
+      addMapControl(); //向地图添加控件
+      addMapOverlay(); //向地图添加覆盖物
+    }
+
+    function createMap() {
+      map = new BMap.Map("map");
+      map.centerAndZoom(new BMap.Point(116.315501, 39.986694), 15);
+    }
+
+    function setMapEvent() {
+      map.enableScrollWheelZoom();
+      map.enableKeyboard();
+      map.enableDragging();
+      map.enableDoubleClickZoom()
+    }
+
+    function addClickHandler(target, window) {
+      target.addEventListener("click", function () {
+        target.openInfoWindow(window);
+      });
+    }
+
+    function addMapOverlay() {
+      var markers = [{
+        content: "400-646-0696<br>zhitengzxs@126.com<br>北京市海淀区立方·庭2-623",
+        title: "北京智滕教育科技有限公司",
+        imageOffset: {
+          width: -46,
+          height: -21
+        },
+        position: {
+          lat: 39.986694,
+          lng: 116.315501
+        }
+      }];
+      for (var index = 0; index < markers.length; index++) {
+        var point = new BMap.Point(markers[index].position.lng, markers[index].position.lat);
+        var marker = new BMap.Marker(point, {
+          icon: new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png", new BMap.Size(20, 25), {
+            imageOffset: new BMap.Size(markers[index].imageOffset.width, markers[index].imageOffset.height)
+          })
+        });
+        //var label = new BMap.Label("",{offset: new BMap.Size(25,5)});
+        var opts = {
+          width: 200,
+          title: "<font color=#000><b>" + markers[index].title + "</b></font>",
+          enableMessage: false
+        };
+        var infoWindow = new BMap.InfoWindow("<font style='color:#999; font-family:Arial';>" + markers[index].content +
+          "</font>", opts);
+        marker.setLabel(label);
+        addClickHandler(marker, infoWindow);
+        map.addOverlay(marker);
+        marker.openInfoWindow(infoWindow);
+      };
+      var labels = [];
+      for (var index = 0; index < labels.length; index++) {
+        var opt = {
+          position: new BMap.Point(labels[index].position.lng, labels[index].position.lat)
+        };
+        var label = new BMap.Label(labels[index].content, opt);
+        map.addOverlay(label);
+      };
+    }
+    //向地图添加控件
+    function addMapControl() {
+      var scaleControl = new BMap.ScaleControl({
+        anchor: BMAP_ANCHOR_BOTTOM_LEFT
+      });
+      scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+      map.addControl(scaleControl);
+      var navControl = new BMap.NavigationControl({
+        anchor: BMAP_ANCHOR_TOP_LEFT,
+        type: BMAP_NAVIGATION_CONTROL_LARGE
+      });
+      map.addControl(navControl);
+      var overviewControl = new BMap.OverviewMapControl({
+        anchor: BMAP_ANCHOR_BOTTOM_RIGHT,
+        isOpen: true
+      });
+      map.addControl(overviewControl);
+    }
+    var map;
+    initMap();
+
+  </script>
+
+</body>
+
+</html>

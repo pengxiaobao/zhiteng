@@ -7,10 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="致力于上亿幼小学生的课外素质潜能开发、训练与推广" />
   <meta name="keywords" content="智滕珠心算官方网站,智滕,智滕教育,珠心,珠心算,珠心算法,心算,心算法,智滕教育珠心算,特色教程,智滕教育特色课程" />
-  <title>首页 - 智滕教育</title>
+  <title>首页 - 智滕教育官网</title>
   <link rel="icon" type="image/x-icon" href="./images/main/127.png">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/index.css">
 </head>
 
 <body>
@@ -208,26 +208,24 @@
 
   <div class="content-form " style="display: hidden">
     <!--form 获取免费体验课程-->
-    <div class="container form-1802-2804">
+    <div class="container form-1802-2804" style="width: 100%">
       <form class="form-inline">
         <div class="form-group">
           <label for="name">姓名：</label>
-          <input type="text" class="form-control" id="name" placeholder="请填写姓名">
+          <input type="text" class="form-control" style="height: 50px;" id="name" placeholder="请填写姓名">
         </div>
         <div class="form-group">
           <label for="phone">联系电话：</label>
-          <input type="text" class="form-control" id="phone" placeholder="请输入联系电话">
+          <input type="text" class="form-control" style="height: 50px;" id="phone" placeholder="请输入联系电话">
         </div>
 
         <div class="form-group">
-          <label for="city">所在城市：</label>
-          <select class="form-control" id="city" placeholder="请选择城市">
-            <option value="">请选择城市</option>
-            <option value="1">北京</option>
-            <option value="2">上海</option>
-            <option value="3">南京</option>
-            <option value="4">哈尔滨</option>
-          </select>
+          <label for="city">联系地址：</label>
+          <textarea  class="form-control" id="addr" style="height: 50px;" placeholder="请输入联系地址"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="city">留言：</label>
+          <textarea  class="form-control" id="message" style="height: 50px;" placeholder="亲，有什么想说的吗"></textarea>
         </div>
 
         <button type="button" class="btn btn-default sbbtn" id="submit">提交信息</button>
