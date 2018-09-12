@@ -3,11 +3,30 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 为移动设备添加 viewport -->
+  <!-- `width=device-width` 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式打开页面时出现黑边-->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+  <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="致力于上亿幼小学生的课外素质潜能开发、训练与推广" />
   <meta name="keywords" content="智滕珠心算官方网站,智滕,智滕教育,珠心,珠心算,珠心算法,心算,心算法,智滕教育珠心算,特色教程,智滕教育特色课程" />
   <title>首页 - 智滕教育官网</title>
+  <script>
+    //根据设备大小自动调整字体
+    (function(win,doc){
+        function change(){
+          if(doc.documentElement.clientWidth < 430){
+            doc.documentElement.style.fontSize = doc.documentElement.clientWidth*26/750+'px';
+          }else{
+            doc.documentElement.style.fontSize = '14px';
+          }
+        }
+        change();
+        win.onresize = change;
+    })(window,document);
+  </script>
   <link rel="icon" type="image/x-icon" href="./images/main/127.png">
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="./css/index.css">
@@ -15,8 +34,9 @@
 
 <body>
 
-  <div class="index-first">
-    <link rel="import" href="./widget/head.html?__inline">
+  <link rel="import" href="./widget/head.html?__inline">
+  <div class="index-first index">
+    <img class="if_img" src="./images/index/112.jpg" />
     <div class="container content">
       <div class="table-cell">
         <h1 class="i-title">诸事皆可实验 唯教子无法重来</h1>
@@ -205,9 +225,8 @@
     </div>
   </div>
 
-
+<!--
   <div class="content-form " style="display: hidden">
-    <!--form 获取免费体验课程-->
     <div class="container form-1802-2804" style="width: 100%">
       <form class="form-inline">
         <div class="form-group">
@@ -221,17 +240,17 @@
 
         <div class="form-group">
           <label for="city">联系地址：</label>
-          <textarea  class="form-control" id="addr" style="height: 50px;" placeholder="请输入联系地址"></textarea>
+          <textarea class="form-control" id="addr" style="height: 50px;" placeholder="请输入联系地址"></textarea>
         </div>
         <div class="form-group">
           <label for="city">留言：</label>
-          <textarea  class="form-control" id="message" style="height: 50px;" placeholder="亲，有什么想说的吗"></textarea>
+          <textarea class="form-control" id="message" style="height: 50px;" placeholder="亲，有什么想说的吗"></textarea>
         </div>
 
         <button type="button" class="btn btn-default sbbtn" id="submit">提交信息</button>
       </form>
     </div>
-  </div>
+  </div> -->
 
   <link rel="import" href="./widget/footer.html?__inline">
 

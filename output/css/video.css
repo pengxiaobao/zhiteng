@@ -1,0 +1,130 @@
+.videoModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9000;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background: rgba(46, 61, 73, .95)
+}
+
+.videoModal .container {
+  position: relative;
+  height: 100%
+}
+
+.videoModal .video-dialog {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  width: 100%;
+  outline: 0;
+  position: relative;
+  background: #fff;
+  text-align: left;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  vertical-align: middle;
+  max-width: 48.75rem;
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+  -webkit-box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, .2);
+  box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, .2);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  border-radius: .375rem
+}
+
+@media screen and (min-width:992px) {
+  .videoModal .video-dialog {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem
+  }
+}
+
+.videoModal .video-dialog {
+  background: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  display: table
+}
+
+.videoModal .prism-player video {
+  background: #fff
+}
+
+.videoModal .player-body {
+  position: relative
+}
+
+.videoModal .modal-close {
+  top: -45px;
+  right: 0;
+  opacity: 1;
+  outline: 0;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10000;
+  padding: 10px
+}
+.prism-player .prism-controlbar {
+  height: 45px;
+}
+/*
+.videoModal .modal-close img {
+  width: 20px
+}
+
+.videoModal .prism-player,
+.prism-player {
+  background: none !important;
+  border: 1px solid transparent !important
+} */
+/*
+.prism-player .prism-controlbar .prism-controlbar-bg {
+  display: none !important
+}
+
+.prism-player .prism-progress .prism-progress-loaded {
+  background: #bbc9d4
+}
+
+.prism-player .prism-progress .prism-progress-played {
+  background: #00b3e1
+}
+
+.prism-player .prism-play-btn.playing {
+  background: url(../images/icon_video.png) -208px -269px no-repeat
+}
+
+.prism-player .prism-play-btn {
+  background: url(../images/icon_video.png) -2px -250px no-repeat
+}
+
+.prism-player .prism-volume {
+  background: url(../images/icon_video.png) -199px -119px no-repeat
+}
+
+.prism-player .prism-fullscreen-btn {
+  background: url(../images/icon_video.png) -124px -190px no-repeat
+}
+
+.prism-player .prism-fullscreen-btn.fullscreen {
+  background: url(../images/icon_video.png) -161px -183px no-repeat
+} */
+
+@media(min-width:1200px) {
+  .videoModal .container {
+    width: 970px
+  }
+}

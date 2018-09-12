@@ -1,0 +1,11 @@
+a {
+  color: #FFF;
+  text-decoration: none;
+}
+a:hover,
+a:active,
+a:focus,
+a:visited {
+  color: #FFF;
+  text-decoration: none;
+}

@@ -6,7 +6,7 @@ fis.match('**/*.{js,css}', {
 });
 
 // npm install -g fis-parser-less-2.x
-fis.match('**/*.less', {
+fis.match('css/*.less', {
   rExt: '.css', // from .less to .css
   parser: fis.plugin('less-2.x', {
       // fis-parser-less-2.x option
